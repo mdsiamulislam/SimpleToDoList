@@ -20,7 +20,8 @@ int main() {
     printf("\t\t\t\tEnter 'S' to show all tasks\n\n");
 
     char nav;
-    scanf(" %c", nav);
+    printf("\t\t\t\t");
+    scanf("%c", &nav);
 
     switch (nav) {
     case 'N':
@@ -30,10 +31,10 @@ int main() {
             return 1;
         }
 
-        printf("Write Your Task: ");
+        printf("\t\t\t\tWrite Your Task: ");
         char task[1000];
         scanf(" %[^\n]", task);
-        fprintf(filePointer, "%s\n", task)
+        fprintf(filePointer, "%s\n", task);
         fclose(filePointer);
         break;
     case 'S':
